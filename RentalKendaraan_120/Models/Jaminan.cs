@@ -1,11 +1,19 @@
-﻿using System;
+﻿using RentalKendaraan_120.Models;
+using System;
 using System.Collections.Generic;
 
-namespace RentalKendaraan_120.Models
+namespace RentalKendaraan_096.Models
 {
     public partial class Jaminan
     {
+        public Jaminan()
+        {
+            Peminjaman = new HashSet<Peminjaman>();
+        }
+
         public int IdJaminan { get; set; }
         public string NamaJaminan { get; set; }
+
+        public ICollection<Peminjaman> Peminjaman { get; set; }
     }
 }
